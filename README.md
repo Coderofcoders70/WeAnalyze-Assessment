@@ -1,6 +1,6 @@
 Helpdesk Capacity Dashboard - WeAnalyz Assignment
 
-A modern, responsive ticketing dashboard built with **ReactJS** and **Tailwind CSS**. This project was developed as part of the recruitment process for the WeAnalyz Internship.
+A modern, responsive ticketing dashboard built with **ReactJS** and **Tailwind CSS**. .
 
 Live Demo
 Link: https://we-analyze-assessment.vercel.app/
