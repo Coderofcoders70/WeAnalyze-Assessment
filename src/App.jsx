@@ -1,28 +1,19 @@
-
-function Sidebar() {
-  const menuItems = [
-    { label: 'Dashboard', active: true },
-    { label: 'Tickets', active: false },
-  ];
-
-  return (
-    <aside>
-      <div>
-        <h1 className="text-4xl">WeAnalyze</h1>
-      </div>
-      <div>
-        {menuItems.map((item) => item.label)}
-      </div>
-    </aside>
-  )
-}
+import Sidebar from "./components/Sidebar"
 
 function App() {
 
   return (
-    <>
+    <div>
+      {/* Sidebar  */}
       <Sidebar />
-    </>
+
+      {/* Header  */}
+
+      {/* Status Cards  */}
+
+      {/* Ticket Table  */}
+
+    </div>
   )
 }
 
