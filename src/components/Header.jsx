@@ -21,8 +21,9 @@ const Header = ({ onMenuClick }) => {
       </div>
 
       <div className="flex items-center gap-3 md:gap-6 ml-4">
-        <button className="text-slate-500 hover:text-blue-600">
+        <button className="relative text-slate-500 hover:text-blue-600">
           <Bell size={20} />
+          <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
         </button>
         <div className="flex items-center gap-2 md:gap-3 pl-3 md:pl-6 border-l border-slate-200">
           <div className="hidden sm:block text-right">

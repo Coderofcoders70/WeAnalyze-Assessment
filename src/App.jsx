@@ -2,20 +2,26 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import { Stats_Data } from './data/mockData';
+import LoginPage from './components/LoginPage';
 import StatusCard from './components/StatusCard';
 import TicketTable from './components/TicketTable';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  if (!isLoggedIn) {
+    return <LoginPage onLogin={() => setIsLoggedIn(true)} />; // If not logged in then take the user back to the login page
+  }
 
   return (
     <div className="flex min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
-      
+
       <Sidebar isOpen={isSidebarOpen} setOpen={setSidebarOpen} />
 
       <main className="flex-1 flex flex-col min-w-0">
         <Header onMenuClick={() => setSidebarOpen(true)} />
-        
+
         <div className="p-4 md:p-8 space-y-6 md:space-y-8">
           {/* Status Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
