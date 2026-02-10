@@ -1,6 +1,7 @@
 import { Tickets_Data } from '../data/mockData';
 
 const TicketTable = () => {
+  // This function will help to adjust the styling of status of any resolved or pending request 
   const getStatusStyle = (status) => {
     switch (status) {
       case 'Open': return 'bg-blue-100 text-blue-700';
@@ -10,6 +11,7 @@ const TicketTable = () => {
     }
   };
 
+  // This function will help to show which status request is low, medium and high. So that user can understand its priority 
   const getPriorityStyle = (priority) => {
     if (priority === 'High') return 'text-red-500';
     if (priority === 'Medium') return 'text-amber-500';
