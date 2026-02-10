@@ -10,6 +10,11 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setSidebarOpen(false); 
+  };
+
   if (!isLoggedIn) {
     return <LoginPage onLogin={() => setIsLoggedIn(true)} />; // If not logged in then take the user back to the login page
   }
@@ -17,10 +22,10 @@ function App() {
   return (
     <div className="flex min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
 
-      <Sidebar isOpen={isSidebarOpen} setOpen={setSidebarOpen} />
+      <Sidebar isOpen={isSidebarOpen} setOpen={setSidebarOpen} onLogout={handleLogout}  />
 
       <main className="flex-1 flex flex-col min-w-0">
-        <Header onMenuClick={() => setSidebarOpen(true)} />
+        <Header onMenuClick={() => setSidebarOpen(true)} onLogout={handleLogout} />
 
         <div className="p-4 md:p-8 space-y-6 md:space-y-8">
           {/* Status Cards */}

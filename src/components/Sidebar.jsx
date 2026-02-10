@@ -13,8 +13,8 @@ const Sidebar = ({ isOpen, setOpen }) => {
   return (
     <>
       {isOpen && (
-        <div 
-          className="fixed inset-0 bg-slate-900/50 z-40 lg:hidden" 
+        <div
+          className="fixed inset-0 bg-slate-900/50 z-40 lg:hidden"
           onClick={() => setOpen(false)}
         />
       )}
@@ -25,14 +25,14 @@ const Sidebar = ({ isOpen, setOpen }) => {
       `}>
         <div className="p-6 flex justify-between items-center">
           <h1 className="text-blue-600 font-bold text-2xl flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg shrink-0"></div> 
+            <div className="w-8 h-8 bg-blue-600 rounded-lg shrink-0"></div>
             WeAnalyz
           </h1>
           <button className="lg:hidden text-slate-500" onClick={() => setOpen(false)}>
             <X size={24} />
           </button>
         </div>
-        
+
         <nav className="flex-1 px-4 space-y-2 mt-4">
           {menuItems.map((item, index) => (
             <div key={index} className={`flex items-center gap-3 px-4 py-3 rounded-lg cursor-pointer ${item.active ? 'bg-blue-50 text-blue-600' : 'text-slate-500 hover:bg-slate-50'}`}>

@@ -1,6 +1,6 @@
-import { Search, Bell, User, Menu } from 'lucide-react';
+import { Search, Bell, User, Menu, LogOut } from 'lucide-react';
 
-const Header = ({ onMenuClick }) => {
+const Header = ({ onMenuClick, onLogout }) => {
   return (
     <header className="h-16 md:h-20 bg-white border-b border-slate-200 flex items-center justify-between px-4 md:px-8 sticky top-0 z-30">
       <div className="flex items-center gap-4 flex-1">
@@ -32,6 +32,13 @@ const Header = ({ onMenuClick }) => {
           <div className="w-8 h-8 md:w-10 md:h-10 bg-slate-200 rounded-full flex items-center justify-center shrink-0">
             <User size={18} className="text-slate-500" />
           </div>
+          <button 
+            onClick={onLogout}
+            className="ml-2 p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all"
+            title="Logout"
+          >
+            <LogOut size={18} />
+          </button>
         </div>
       </div>
     </header>
