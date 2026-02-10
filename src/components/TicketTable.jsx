@@ -41,7 +41,7 @@ const TicketTable = () => {
                 </span>
               </td>
               <td className="px-6 py-4 text-sm font-medium">
-                <span className={getPriorityStyle(ticket.priority)}>● {ticket.priority}</span>
+                <span className={getPriorityStyle(ticket.priority)}>{ticket.priority}</span>
               </td>
               <td className="px-6 py-4 text-sm text-slate-500">{ticket.date}</td>
             </tr>
